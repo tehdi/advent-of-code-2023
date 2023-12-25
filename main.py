@@ -18,22 +18,22 @@ def configure_logging(verbose, output_file):
         )
 
 
-def part_one(input_data: list[str], args) -> None:
+def part_one(input_data: list[str], args) -> int:
     # for line_index,line in enumerate(input_data):
     for line in input_data:
         # for char_index,char in enumerate(line):
         for char in line:
             pass
-    logging.info(f"Part One")
+    return 0
 
 
-def part_two(input_data: list[str], args) -> None:
+def part_two(input_data: list[str], args) -> int:
     # for line_index,line in enumerate(input_data):
     for line in input_data:
         # for char_index,char in enumerate(line):
         for char in line:
             pass
-    logging.info(f"Part Two")
+    return 0
 
 
 if __name__ == '__main__':
@@ -48,5 +48,7 @@ if __name__ == '__main__':
     filename = args.input_file
     with open(filename) as input_file:
         input_data = [line.rstrip('\n') for line in input_file]
-    if args.part == 1: part_one(input_data, args)
-    elif args.part == 2: part_two(input_data, args)
+    if args.part == 1:
+        logging.info(f"Part 1 (test: 0): {part_one(input_data, args)}")
+    elif args.part == 2:
+        logging.info(f"Part 2 (test: 0): {part_two(input_data, args)}")

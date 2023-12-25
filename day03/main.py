@@ -113,11 +113,9 @@ def part_two(input_data: list[str], args) -> None:
                     value = c
                 last_x = x
             values.append(int(value))
-        if (l:=len(values)) != 2: continue
-        gear_ratio = values[0] * values[1]
-        gear_ratios += gear_ratio
+        if len(values) != 2: continue
+        gear_ratios += values[0] * values[1]
     return gear_ratios
-
 
 
 if __name__ == '__main__':
